@@ -3,7 +3,7 @@ CREATE DATABASE catch_the_match_db;
 
 USE catch_the_match_db;
 
-CREATE TABLE users_tbl(
+CREATE TABLE user_tbls(
 		user_id INT NOT NULL AUTO_INCREMENT
 	,	user_last_name VARCHAR(100) NOT NULL
 	,	user_first_name VARCHAR(100) NOT NULL
@@ -11,17 +11,17 @@ CREATE TABLE users_tbl(
 	,	PRIMARY KEY (user_id)
 	);
 
-CREATE TABLE my_sports_tbl(
+CREATE TABLE my_sports_tbls(
 		my_sports_id INT NOT NULL AUTO_INCREMENT
 	,	my_sports_api_id VARCHAR(100)
 	,	my_sports_user_id INT
 	,	my_sports_type VARCHAR(100)
 	,	PRIMARY KEY (my_sports_id)
-	,	FOREIGN KEY (my_sports_user_id) REFERENCES users_tbl(user_id)
+	,	FOREIGN KEY (my_sports_user_id) REFERENCES user_tbls(user_id)
 );
 
 /* Create User: Irfan Ahmed */
-INSERT INTO users_tbl (
+INSERT INTO user_tbls (
 		user_last_name
 	,	user_first_name
 	,	user_email
@@ -33,7 +33,7 @@ VALUES (
 );
 
 /* Create User: Sean Hagan */
-INSERT INTO users_tbl (
+INSERT INTO user_tbls (
 		user_last_name
 	,	user_first_name
 	,	user_email
@@ -45,7 +45,7 @@ VALUES (
 );
 
 /* Create User: Jatin Makhijani */
-INSERT INTO users_tbl (
+INSERT INTO user_tbls (
 		user_last_name
 	,	user_first_name
 	,	user_email
@@ -57,7 +57,7 @@ VALUES (
 );
 
 /* Create User: Alex Green */
-INSERT INTO users_tbl (
+INSERT INTO user_tbls (
 		user_last_name
 	,	user_first_name
 	,	user_email
@@ -71,7 +71,7 @@ VALUES (
 
 /* Irfan's Teams */
 /* Wizards */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -83,7 +83,7 @@ VALUES (
 );
 
 /* Hornets */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -95,7 +95,7 @@ VALUES (
 );
 
 /* Hawks */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -107,7 +107,7 @@ VALUES (
 );
 
 /* Heat */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -119,7 +119,7 @@ VALUES (
 );
 
 /* Magic */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -132,7 +132,7 @@ VALUES (
 
 /* Sean's Teams */
 /* Knicks */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -144,7 +144,7 @@ VALUES (
 );
 
 /* 76ers */ 
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -156,7 +156,7 @@ VALUES (
 );
 
 /* Nets */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -168,7 +168,7 @@ VALUES (
 );
 
 /* Celtics */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -180,7 +180,7 @@ VALUES (
 );
 
 /* Raptors */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -193,7 +193,7 @@ VALUES (
 
 /* Jaitan's Teams */
 /* Grizzlies */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -205,7 +205,7 @@ VALUES (
 );
 
 /* Rockets */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -217,7 +217,7 @@ VALUES (
 );
 
 /* Pelicans */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -229,7 +229,7 @@ VALUES (
 );
 
 /* Spurs */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -241,7 +241,7 @@ VALUES (
 );
 
 /* Mavericks */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -254,7 +254,7 @@ VALUES (
 
 /* Alex's Teams */
 /* Warriors */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -266,7 +266,7 @@ VALUES (
 );
 
 /* Lakers */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -278,7 +278,7 @@ VALUES (
 );
 
 /* Clippers */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -290,7 +290,7 @@ VALUES (
 );
 
 /* Suns */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
@@ -302,7 +302,7 @@ VALUES (
 );
 
 /* Kings */
-INSERT INTO my_sports_tbl (
+INSERT INTO my_sports_tbls (
 		my_sports_api_id
 	, 	my_sports_user_id
 	, 	my_sports_type
