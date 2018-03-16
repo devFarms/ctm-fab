@@ -23,7 +23,7 @@ var MySports = sequelize.define('my_sports_tbl', {
     type: Sequelize.STRING
   }
 }, {
-  timestamps: true
+  timestamps: false
 });
 
 // Syncs with DB
