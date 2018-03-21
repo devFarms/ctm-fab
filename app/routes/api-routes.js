@@ -16,6 +16,7 @@ module.exports = function(app) {
 
   // Get a specific users team
   app.get('/api/my-sports/:team', function(req, res) {
+    console.log("WE ARE IN")
     var seanArray = [];
     if (req.params.team) {
       MySports.findAll({
@@ -25,19 +26,23 @@ module.exports = function(app) {
       }).then(function(results) {
         axios.get('https://api.sportradar.us/nba/trial/v4/en/games/2018/03/17/schedule.json?api_key=g25ry7vx8nyrw8rhag4ua3sn')
         .then(function(response){
-          for (var k = 0; k < response.data.games.length; k++){
-            seanArray.push(
-              {
-                teamId: response.data.games[k].home.id,
-                teamName: response.data.games[k].home.name,
-                network: response.data.games[k].broadcast.network,
-                satellite: response.data.games[k].broadcast.satellite
-              });
-          }
-        seanArray.push(results);
-        res.send(seanArray);
-        });
-      });
+          const resultsArr = response.data.games.filter(elem => {
+           const temp = results.find(resultsElem => {
+             return resultsElem.my_sports_api_id === elem.home.id || resultsElem.my_sports_api_id === elem.away.id
+            });
+            return temp != null;
+          })
+        res.json(resultsArr)
+        })
+        .catch( err => {
+          console.log("ERROR")
+          console.log(err)
+          res.status(500).json(err.toString());
+        })
+      })
+      .catch( err=> {
+        res.status(500).json(err);
+      })
     }
   });
 
