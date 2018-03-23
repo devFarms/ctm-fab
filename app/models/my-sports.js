@@ -25,7 +25,9 @@ var MySports = sequelize.define('my_sports_tbl', {
 }, {
   timestamps: false
 });
+  MySports.associate = function(models) {
 
+  }
 // Syncs with DB
 MySports.sync();
 

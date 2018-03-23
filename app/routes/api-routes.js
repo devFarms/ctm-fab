@@ -1,6 +1,7 @@
 // Dependencies
 // =============================================================
 var User = require('../models/user.js');
+var NBATeams = require("../models/nba-teams");
 var MySports = require('../models/my-sports.js');
 var axios = require('axios');
 
@@ -13,18 +14,38 @@ module.exports = function(app) {
       res.json(results);
     });
   });
+  app.post("/api/my-sports", function(req, res) {
+    var mySport = {
+      my_sports_api_id: req.body.teamId,
+      my_sports_user_id: req.body.userId,
+      my_sports_type: "NBA",
+    }
+    MySports.create(mySport)
+    .then(function(resp) {
+      console.log("done")
+      res.json(resp);
+    })
+    .catch(function(err) {
+      console.error(err);
+    })
+  })
+  app.get('/api/teams', function(req, res){
+    NBATeams.findAll({}).then(function(results){
+      res.json(results);
+    });
+  });
 
   // Get a specific users team
   app.get('/api/my-sports/:team', function(req, res) {
     console.log("WE ARE IN")
-    var seanArray = [];
+    // var seanArray = [];
     if (req.params.team) {
       MySports.findAll({
         where: {
           my_sports_user_id: req.params.team
         }
       }).then(function(results) {
-        axios.get('https://api.sportradar.us/nba/trial/v4/en/games/2018/03/17/schedule.json?api_key=g25ry7vx8nyrw8rhag4ua3sn')
+        axios.get('https://api.sportradar.us/nba/trial/v4/en/games/2018/03/22/schedule.json?api_key=g25ry7vx8nyrw8rhag4ua3sn')
         .then(function(response){
           const resultsArr = response.data.games.filter(elem => {
            const temp = results.find(resultsElem => {
@@ -45,27 +66,4 @@ module.exports = function(app) {
       })
     }
   });
-
-  // Get data from sports table
-  // app.get('/api/my-sports', function(req, res){
-  //   var seanArray = [];
-  //   MySports.findAll({}).then(function(results) {
-  //     axios.get('https://api.sportradar.us/nba/trial/v4/en/games/2018/03/17/schedule.json?api_key=g25ry7vx8nyrw8rhag4ua3sn')
-  //     .then(function(response){
-  //       for (var k = 0; k < response.data.games.length; k++){
-  //         seanArray.push(
-  //           {
-  //             teamId: response.data.games[k].home.id,
-  //             teamName: response.data.games[k].home.name,
-  //             network: response.data.games[k].broadcast.network,
-  //             satellite: response.data.games[k].broadcast.satellite
-  //           });
-  //       }
-  //       seanArray.push(results);
-  //       // console.log(seanArray);
-  //       res.send(seanArray);
-  //     });
-  //   });
-  // });
-
 };

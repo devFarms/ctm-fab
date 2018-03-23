@@ -6,19 +6,16 @@ var Sequelize = require('sequelize');
 // sequelize (lowercase) references my connection to the DB.
 var sequelize = require('../config/connection.js');
 
-var User = sequelize.define('user_tbl', {
-  user_id: {
+var NBATeams = sequelize.define('nba_teams_tbls', {
+  nba_team_id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       primaryKey: true
   },  
-    user_last_name: {
+    nba_team_name: {
     type: Sequelize.STRING
   },
-  user_first_name: {
-    type: Sequelize.STRING
-  },
-  user_email: {
+  my_sports_api_id: {
     type: Sequelize.STRING
   }
 }, {
@@ -26,7 +23,7 @@ var User = sequelize.define('user_tbl', {
 });
 
 // Syncs with DB
-User.sync();
+NBATeams.sync();
 
 // Makes the User Model available for other files (will also create a table)
-module.exports = User;
+module.exports = NBATeams;
