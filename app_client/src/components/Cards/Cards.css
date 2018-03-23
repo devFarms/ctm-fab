@@ -1,0 +1,21 @@
+.card {
+    box-shadow: 10px 10px rgba(0, 0, 0 , 0.4); 
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+.card-img-top-1 {
+    height: 100px;
+    width: 100px;
+    
+}
+
+.card-img-top-2 {
+    height: 100px;
+    width: 100px;
+}
+
+.card-img-top-3 {
+    height: 100px;
+    width: 100px;
+}
+
