@@ -312,3 +312,231 @@ VALUES (
 	, 	4
 	,	"NBA"
 );
+
+USE catch_the_match_db;
+
+CREATE TABLE nba_teams_tblss(
+  	nba_team_id INT NOT NULL AUTO_INCREMENT
+  , nba_team_name VARCHAR(100) NOT NULL
+  , my_sports_api_id VARCHAR(100) NOT NULL
+  , PRIMARY KEY (nba_team_id)
+);
+
+
+/* Irfan's Teams */
+/* Wizards */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Wizards"
+	,	"583ec8d4-fb46-11e1-82cb-f4ce4684ea4c"
+);
+
+/* Hornets */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	,	my_sports_api_id
+	)
+VALUES (
+		"Hornets"
+	,	"583ec97e-fb46-11e1-82cb-f4ce4684ea4c"
+);
+
+/* Hawks */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Hawks"
+	,	"583ecb8f-fb46-11e1-82cb-f4ce4684ea4c"
+);
+
+/* Heat */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Heat"
+	,	"583ecea6-fb46-11e1-82cb-f4ce4684ea4c"
+);
+
+/* Magic */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Magic"
+	,	"583ed157-fb46-11e1-82cb-f4ce4684ea4c"
+);
+
+/* Sean's Teams */
+/* Knicks */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Knicks"
+	,	"583ec70e-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* 76ers */ 
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"76ers"
+	,	"583ec87d-fb46-11e1-82cb-f4ce4684ea4c"
+);
+
+/* Nets */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Nets"
+	,	"583ec9d6-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Celtics */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Celtics"
+	,	"583eccfa-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Raptors */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Raptors"
+	,	"583ecda6-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Jaitan's Teams */
+/* Grizzlies */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Grizzlies"
+	,	"583eca88-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Rockets */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Rockets"
+	,	"583ecb3a-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Pelicans */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Pelicans"
+	,	"583ecc9a-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Spurs */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Spurs"
+	,	"583ecd4f-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Mavericks */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Mavericks"
+	,	"583ecf50-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Alex's Teams */
+/* Warriors */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Warriors"
+	,	"583ec825-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Lakers */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Lakers"
+	,	"583ecae2-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Clippers */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Clippers"
+	,	"583ecdfb-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Suns */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Suns"
+	,	"583ecfa8-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
+
+/* Kings */
+INSERT INTO nba_teams_tbls (
+		nba_team_name
+	, 	my_sports_api_id
+	)
+VALUES (
+		"Kings"
+	,	"583ed0ac-fb46-11e1-82cb-f4ce4684ea4c"
+
+);
