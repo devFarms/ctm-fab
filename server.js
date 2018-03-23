@@ -15,7 +15,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory to be served
-app.use(express.static("app/public"));
+app.use(express.static("app_client/public"));
 
 // Routes
 // =============================================================
