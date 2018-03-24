@@ -19,7 +19,7 @@ class App extends Component {
       <Router>
         <div className="App Site">
           <div>
-            <ProtectedRoute exact path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/Landing" component={landing} />
             <Route exact path="/Home" component={Home} />
           </div>
