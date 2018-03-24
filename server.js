@@ -23,7 +23,7 @@ require("./app/routes/api-routes.js")(app);
 
 // Here we introduce HTML routing to serve different HTML files
 // require("./app/routes/html-routes.js")(app);
-app.get("*", function(req, res){
+app.get("/", function(req, res){
   res.send("home")
 })
 
