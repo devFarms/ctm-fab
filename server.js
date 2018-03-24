@@ -15,7 +15,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory to be served
-app.use(express.static("app_client/public"));
+app.use(express.static("app_client/build"));
 
 // Routes
 // =============================================================
@@ -23,9 +23,11 @@ require("./app/routes/api-routes.js")(app);
 
 // Here we introduce HTML routing to serve different HTML files
 // require("./app/routes/html-routes.js")(app);
-app.get("/", function(req, res){
-  res.send("home")
-})
+
+// app.get("/", function(req, res){
+//   const path = require('path');
+//   res.sendFile(path.resolve(__dirname, "app_client","build", "index.html"))
+// })
 
 // Starts the server to begin listening
 // =============================================================
