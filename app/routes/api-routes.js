@@ -14,6 +14,7 @@ module.exports = function(app) {
       res.json(results);
     });
   });
+  
   app.post("/api/my-sports", function(req, res) {
     var mySport = {
       my_sports_api_id: req.body.teamId,

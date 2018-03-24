@@ -315,7 +315,7 @@ VALUES (
 
 USE catch_the_match_db;
 
-CREATE TABLE nba_teams_tblss(
+CREATE TABLE nba_teams_tbls(
   	nba_team_id INT NOT NULL AUTO_INCREMENT
   , nba_team_name VARCHAR(100) NOT NULL
   , my_sports_api_id VARCHAR(100) NOT NULL

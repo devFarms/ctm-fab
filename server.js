@@ -24,10 +24,10 @@ require("./app/routes/api-routes.js")(app);
 // Here we introduce HTML routing to serve different HTML files
 // require("./app/routes/html-routes.js")(app);
 
-// app.get("/", function(req, res){
-//   const path = require('path');
-//   res.sendFile(path.resolve(__dirname, "app_client","build", "index.html"))
-// })
+app.get("/", function(req, res){
+  const path = require('path');
+  res.sendFile(path.resolve(__dirname, "app_client","build", "index.html"))
+})
 
 // Starts the server to begin listening
 // =============================================================
